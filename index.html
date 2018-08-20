@@ -9,36 +9,48 @@
     <title>Address Book v.2</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Addres Book</h1>
-      <div class="row">
-            <div class="col-md-6">
-              <h2>Add a contact:</h2>
-              <form id="new-contact">
-                <div class="form-group">
-                  <label for="new-first-name">First name</label>
-                  <input type="text" class="form-control" id="new-first-name">
-                </div>
-                <div class="form-group">
-                  <label for="new-last-name">Last name</label>
-                  <input type="text" class="form-control" id="new-last-name">
-                </div>
-                <button type="submit" class="btn">Add</button>
-        </form>
+      <div class="container">
+        <h1>Places you've been</h1>
 
-        <h2>Contacts:</h2>
-        <ul id="contacts">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Add a location:</h2>
+            <form id="new-location">
+              <div class="form-group">
+                <label for="new-place">Name of Place</label>
+                <input type="text" class="form-control" id="new-place">
               </div>
-            <div class="col-md-6">
-                <div id="show-contact">
-                  <h2></h2>
-                  <p>First name: <span class="first-name"></span></p>
-                  <p>Last name: <span class="last-name"></span></p>
-                   <button type="submit" class="btn">Add</button>
-               </div>
-          </div>
+              <div class="form-group">
+                <label for="new-landmark">Landmarks Nearby</label>
+                <input type="text" class="form-control" id="new-landmark">
+              </div>
+              <div class="form-group">
+                <label for="new-restaurant">Restaurants Nearby</label>
+                <input type="text" class="form-control" id="new-restaurant">
+              </div>
+              <div class="form-group">
+                <label for="new-people-visited">People Visited</label>
+                <input type="text" class="form-control" id="new-people-visited">
+              </div>
 
-    </div>
-  </div>
-  </body>
-</html>
+              <button type="submit" class="btn">Add</button>
+            </form>
+
+            <h2>Places You've Been:</h2>
+            <ul id="allPlaces">
+
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <div id="show-place">
+              <h2></h2>
+              <p>Name: <span class="first-name"></span></p>
+              <p>Landmarks: <span class="first-name"></span></p>
+              <p>Restaurants: <span class="first-name"></span></p>
+              <p>Visited: <span class="last-name"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+  </html>
