@@ -1,30 +1,29 @@
-// business logic
-var wordConverter = function(num){
-  var result = [];
+//business logic
+function Contact(first, last) {
+  this.firstName = first;
+  this.lastName = last;
+}
 
-
-  if(num < 0){
-    return "I suggest a better number."
-    }else if(num > 0 && num%3 === 0){
-    return "I'm sorry, Dave. I'm afraid I can't do that.";
-    } else if(num.toString().indexOf('1') > -1){
-    return "Boop!";
-    } else if(num%10 === 0){
-    return "Beep!";
-    } else {
-    for(var i = 0; i <= num; i += 1){
-      result.push(i);
-      };
-    }
-    return result.toString();
-  }
-// user interface
+// user interface logic
 $(document).ready(function() {
-  $("#magicform").submit(function(event) {
+  $("form#new-contact").submit(function(event) {
     event.preventDefault();
-    var userInput = parseInt($('input#inputOne').val());
-    var userResult = wordConverter(userInput);
-    $("#outputR").text(userResult);
-    $('#magicform').trigger('reset');
+
+    var inputtedFirstName = $("input#new-first-name").val();
+    var inputtedLastName = $("input#new-last-name").val();
+
+    var newContact = new Contact(inputtedFirstName, inputtedLastName);
+
+    $("ul#contacts").append("<li><span class='contact'>" + newContact.firstName + "</span></li>");
+
+    $(".contact").last().click(function() {
+      $("#show-contact").show();
+      $("#show-contact h2").text(newContact.firstName);
+      $(".first-name").text(newContact.firstName);
+      $(".last-name").text(newContact.lastName);
+    });
+
+    $("input#new-first-name").val("");
+    $("input#new-last-name").val("");
   });
 });
