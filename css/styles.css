@@ -1,13 +1,20 @@
-#show-contact {
+body {
+  background-image:url(https://media.giphy.com/media/l1KVboXQeiaX7FHgI/giphy.gif);
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+  color: white;
+}
+
+#show-place {
   display: none;
 }
 
-.contact {
+#allPlaces {
   cursor: pointer;
   color: #0088cc;
 }
 
-.contact:hover {
+#allPlaces:hover {
   text-decoration: underline;
 }
 
@@ -15,4 +22,5 @@
   border: 2px solid red;
   padding: 2px;
   color: black;
+  background-color: yellow;
 }

@@ -1,5 +1,5 @@
 //business logic
-ffunction Place(placeName, landmarks, restaurants, peopleVisited) {
+function Place(placeName, landmarks, restaurants, peopleVisited) {
   this.placeName = placeName;
   this.landmarks = landmarks;
   this.restaurants = restaurants;
@@ -7,7 +7,7 @@ ffunction Place(placeName, landmarks, restaurants, peopleVisited) {
 }
 
 Place.prototype.bongo = function() {
-  return "Location: " + this.placeName;
+  return "Result: " + this.placeName; this.landmarks; this.restaurants; this.peopleVisited;
 }
 
 // user interface logic
@@ -27,12 +27,15 @@ $(document).ready(function() {
 
     $(".onePlace").last().click(function() {
       $("#show-place").show();
-      $("#show-place h2").text(newPlace.placeName);
-      $(".new-place").text(newPlace.landmarks);
-      $(".last-name").text(newPlace.lastName);
-    });
+      $(".new-place").text(newPlace.placeName);
+      $(".new-landmark").text(newPlace.landmarks);
+      $(".new-restaurant").text(newPlace.restaurants);
+      $(".new-people-visited").text(newPlace.peopleVisited);
+        });
 
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("");
+    $("input#new-location").val("");
+    $("input#show-place").val("");
+
+    allPlaces.remove
   });
 });
